@@ -1,0 +1,238 @@
+/* Custom CSS for Hero Section */
+
+/* Background Image for Hero Section */
+.hero-section {
+    position: relative; /* Ensure relative positioning for child absolute elements */
+    overflow: hidden;   /* Hide any overflowing background image */
+}
+
+.hero-bg-image {
+    background-image: url('header-vector.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* or contain, depending on desired effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Place it behind content */
+}
+
+/* Ensure content is above background image */
+.hero-section > .container {
+    position: relative;
+    z-index: 1; /* Place content above the background image */
+}
+
+
+/* Social Icons */
+.hs-icon-custom {
+    background-color: #E7E9FF;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.7s;
+    height: 38px; /* Original height */
+    width: 35px; /* Original width */
+    object-fit: contain; /* Ensures image fits within its bounds */
+}
+
+.hs-icon-custom:hover {
+    background-color: #ff3b33;
+}
+
+/* Heading */
+.hs-heading-custom {
+    font-family: 'Rubik', sans-serif; /* Ensure Rubik font is imported in HTML */
+    font-size: 50px; /* Override Bootstrap's display-3 if needed for exact match */
+    line-height: 1.4; /* Your custom line-height */
+    color: #333; /* Example color, adjust as needed */
+}
+
+/* Adjust heading size for smaller screens if display-3 is too large */
+@media (max-width: 767.98px) { /* Up to small (sm) breakpoint */
+    .hs-heading-custom {
+        font-size: 38px; /* Smaller font size for mobile */
+    }
+}
+
+
+/* Custom Button 1 (Contact Us) */
+.custom-hero-btn1 {
+    background-color: #ff3b33; /* Your custom red */
+    border-color: #ff3b33; /* Match border color */
+    color: white;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    transition: all 0.5s; /* Apply transition to all properties */
+}
+
+.custom-hero-btn1:hover {
+    box-shadow: 0px 4px 9px rgba(255, 59, 51, 0.5);
+    transform: translateY(-5px);
+    background-color: #ff3b33; /* Keep color on hover */
+    border-color: #ff3b33; /* Keep border color on hover */
+    color: white; /* Keep text color on hover */
+}
+
+/* Custom Button 2 (Our Services) */
+.custom-hero-btn2 {
+    background-color: #E7E9FF; /* Your custom light blue/purple */
+    border-color: #E7E9FF; /* Match border color */
+    color: black;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    transition: all 0.5s; /* Apply transition to all properties */
+}
+
+.custom-hero-btn2:hover {
+    box-shadow: 0px 4px 9px rgba(255, 59, 51, 0.5); /* Your custom box-shadow */
+    transform: translateY(-5px);
+    background-color: #E7E9FF; /* Keep color on hover */
+    border-color: #E7E9FF; /* Keep border color on hover */
+    color: black; /* Keep text color on hover */
+}
+
+
+/* Discover Section */
+/* Discover Section */
+/* Discover Section */
+
+.discover-section {
+    background-color: #f8f9fa; /* Example default background color if image isn't loaded */
+    padding-top: 130px; /* Re-applying original padding */
+    padding-bottom: 130px; /* Re-applying original padding */
+}
+
+.discover-bg-image {
+    background-image: url('discover-vector.png');
+    background-position: center;
+    background-size: cover; /* or contain, depending on desired effect */
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Place it behind content */
+    opacity: 0.8; /* Adjust if the image is too prominent */
+}
+
+/* Ensure content is above background image */
+.discover-section > .container {
+    position: relative;
+    z-index: 1; /* Place content above the background image */
+}
+
+/* Custom styles for discover-ideas h1 */
+.discover-heading-custom {
+    font-family: 'Poppins', sans-serif; /* Make sure Poppins font is imported */
+    font-size: 50px; /* Override Bootstrap's display-4 if needed for exact match */
+    color: #0a0c19;
+    line-height: 1.2;
+    /* width: 70%; - Bootstrap's grid handles width, but you can set max-width if desired */
+    max-width: 500px; /* Example max-width for the heading */
+}
+
+/* Adjust heading size for smaller screens */
+@media (max-width: 991.98px) { /* Up to large (lg) breakpoint */
+    .discover-heading-custom {
+        font-size: 40px; /* Smaller font size for tablets/smaller desktops */
+    }
+}
+@media (max-width: 767.98px) { /* Up to medium (md) breakpoint */
+    .discover-heading-custom {
+        font-size: 32px; /* Even smaller font size for mobile */
+    }
+}
+
+
+/* Custom styles for discover-ideas p */
+.discover-para-custom {
+    color: #63688e;
+    font-family: 'Rubik', sans-serif; /* Make sure Rubik font is imported */
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: justify;
+    /* width: 70%; - Bootstrap's grid handles width, but you can set max-width if desired */
+    max-width: 550px; /* Example max-width for the paragraph */
+}
+
+/* Custom styles for list item text */
+.discover-list-text-custom {
+    color: #63688e;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: justify;
+    /* width: 70%; - Bootstrap's grid handles width, but you can set max-width if desired */
+    max-width: 500px; /* Example max-width for list paragraph */
+}
+
+/* Custom styles for the discover button */
+.discover-btn-custom {
+    background-color: #ff3b33;
+    border-color: #ff3b33; /* Ensure border matches background */
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    transition: 0.5s;
+    /* width: 40%; - Bootstrap's block button or d-grid can achieve this */
+    display: inline-block; /* Keep it inline block by default */
+    min-width: 200px; /* Example: ensure minimum width */
+    text-align: center;
+}
+
+.discover-btn-custom:hover {
+    box-shadow: 0px 4px 9px rgba(255, 59, 51, 0.5);
+    transform: translateY(-5px);
+    background-color: #ff3b33; /* Keep color on hover */
+    border-color: #ff3b33; /* Keep border color on hover */
+    color: #fff; /* Keep text color on hover */
+}
+
+/* Adjust button width for smaller screens if needed */
+@media (max-width: 575.98px) { /* Up to extra small (xs) breakpoint */
+    .discover-btn-custom {
+        width: 100%; /* Make button full width on very small screens */
+    }
+}
+
+
+/* Adjustments for the right image */
+.discover-img-custom {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    /* If you need specific fixed dimensions for larger screens: */
+    /* width: 540px; */
+    /* height: 380px; */
+}
+
+/* Custom styles for counter numbers */
+.counter-h1-custom {
+    font-size: 72px; /* Override Bootstrap's display-3 for exact match */
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    color: #FF3B33;
+    line-height: 1; /* Adjust line height for numbers */
+}
+
+/* Adjust counter number size for smaller screens */
+@media (max-width: 767.98px) { /* Up to medium (md) breakpoint */
+    .counter-h1-custom {
+        font-size: 56px; /* Smaller size for mobile counters */
+    }
+}
+
+
+/* Custom styles for counter paragraphs */
+.counter-p-custom {
+    font-size: 24px;
+    color: #63688e;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+}
